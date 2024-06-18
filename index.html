@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="welcome-banner">
+        <h1>Welcome to the third assignment of Network Centric Computing!</h1>
+        <h2>On this website you can look for information of the weather in Maribor (Slovenia) and Telde (Spain)</h2>
+    </div>
+    <div class="weather-container">
+        <div class="location">
+            <h1 id="city">City Name</h1>
+            <p id="country">Country</p>
+            <p id="date">Date</p>
+        </div>
+        <div class="main-description">
+            <div class="temperature">
+                <h2 id="temperature">0°C</h2>
+            </div>
+            <div class="weather-info">
+                <p id="weather-description">Weather Description</p>
+            </div>
+        </div>
+        <div class="additional-info">
+            <div class="info-item">
+                <p id="humidity">Humidity:</p>
+            </div>
+            <div class="info-item">
+                <p id="precipitation">Precipitation:</p>
+            </div>
+            <div class="info-item">
+                <p id="wind-speed">Wind Speed:</p>
+            </div>
+            <div class="info-item">
+                <p id="air-pressure">Air Pressure:</p>
+            </div>
+            <div class="info-item">
+                <p id="wind-direction">Wind Direction:</p>
+            </div>
+        </div>
+    </div>
+    <div class="forecast-maps">
+        <p class="maps-header">Forecast Map:</p>
+        <div class="map-container">
+            <iframe id="maribor-map" class="map hidden" src="https://openweathermap.org/weathermap?basemap=map&cities=false&layer=temperature&lat=46.5607&lon=15.6432&zoom=10" width="800" height="450"></iframe>
+            <iframe id="telde-map" class="map hidden" src="https://openweathermap.org/weathermap?basemap=map&cities=false&layer=temperature&lat=27.9968&lon=-15.4166&zoom=10" width="800" height="450"></iframe>
+        </div>
+    </div>
+        <div class="forecast">
+            <p class="forecast-header">5 Day / 3 Hour Forecast:</p>
+            <div id="forecast-container"></div>
+        </div>
+        <button onclick="toggleCity()">Switch City</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
